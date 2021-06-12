@@ -5,6 +5,7 @@
 #include "Transform.h"
 #include <algorithm>
 
+#include <string.h>
 namespace GLTFHelpers {
 	Transform GetLocalTransform(cgltf_node& node) {
 		Transform result;

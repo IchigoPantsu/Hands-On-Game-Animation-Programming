@@ -1,5 +1,6 @@
 #include "Sample.h"
 
+#include <math.h>
 #define GIZMO_SIZE 0.25f
 #define QUAT_DEG2RAD 0.0174533f
 

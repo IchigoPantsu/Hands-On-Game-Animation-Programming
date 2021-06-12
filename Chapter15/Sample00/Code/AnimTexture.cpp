@@ -6,6 +6,7 @@
 #include <ostream>
 #include <iostream>
 
+#include <string.h>
 AnimTexture::AnimTexture() {
 	mData = 0;
 	mSize = 0;

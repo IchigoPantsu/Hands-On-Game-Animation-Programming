@@ -1,5 +1,7 @@
 #include "Pose.h"
 
+#include <string.h>
+
 Pose::Pose() { }
 
 Pose::Pose(unsigned int numJoints) {

@@ -5,8 +5,10 @@
 #include "glad.h"
 #include "AnimBaker.h"
 
-#include <io.h> 
-#define access _access_s
+//#include <io.h> 
+#include <sys/io.h> 
+#include <unistd.h>
+//#define access _access_s
 
 void Sample::Initialize() {
 	cgltf_data* gltf = LoadGLTFFile("Assets/Woman.gltf");

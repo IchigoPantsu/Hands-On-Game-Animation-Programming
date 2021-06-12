@@ -1,6 +1,7 @@
 #include "Crowd.h"
 #include "Uniform.h"
 
+#include <math.h>
 unsigned int Crowd::Size() {
 	return mCurrentPlayTimes.size();
 }

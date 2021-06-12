@@ -1,8 +1,10 @@
 #include "Clip.h"
 
+#include <math.h>
+/*
 template TClip<TransformTrack>;
 template TClip<FastTransformTrack>;
-
+*/
 template <typename TRACK>
 TClip<TRACK>::TClip() {
 	mName = "No name given";
@@ -155,3 +157,6 @@ FastClip OptimizeClip(Clip& input) {
 
 	return result;
 }
+
+template class TClip<TransformTrack>;
+template class TClip<FastTransformTrack>;

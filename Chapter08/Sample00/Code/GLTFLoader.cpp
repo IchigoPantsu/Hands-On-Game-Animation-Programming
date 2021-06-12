@@ -1,6 +1,8 @@
 #include "GLTFLoader.h"
 #include <iostream>
 
+#include <string.h>
+
 cgltf_data* LoadGLTFFile(const char* path) {
 	cgltf_options options;
 	memset(&options, 0, sizeof(cgltf_options));

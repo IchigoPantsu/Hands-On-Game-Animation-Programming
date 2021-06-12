@@ -7,6 +7,7 @@
 #include "mat4.h"
 #include "DualQuaternion.h"
 
+/*
 template Uniform<int>;
 template Uniform<ivec4>;
 template Uniform<ivec2>;
@@ -17,7 +18,7 @@ template Uniform<vec4>;
 template Uniform<quat>;
 template Uniform<mat4>;
 template Uniform<DualQuaternion>;
-
+*/
 #define UNIFORM_IMPL(gl_func, tType, dType) \
 template<> \
 void Uniform<tType>::Set(unsigned int slot, tType* data, unsigned int length) { \
@@ -52,3 +53,14 @@ template <typename T>
 void Uniform<T>::Set(unsigned int slot, std::vector<T>& value) {
 	Set(slot, &value[0], (unsigned int)value.size());
 }
+
+template class Uniform<int>;
+template class Uniform<ivec4>;
+template class Uniform<ivec2>;
+template class Uniform<float>;
+template class Uniform<vec2>;
+template class Uniform<vec3>;
+template class Uniform<vec4>;
+template class Uniform<quat>;
+template class Uniform<mat4>;
+template class Uniform<DualQuaternion>;

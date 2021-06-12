@@ -5,6 +5,8 @@
 #include <sstream>
 #include <iostream>
 
+#include <string.h>
+
 Shader::Shader() {
 	mHandle = glCreateProgram();
 }

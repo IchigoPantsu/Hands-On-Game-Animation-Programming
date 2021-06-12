@@ -1,5 +1,8 @@
 #include "Track.h"
 
+#include <string.h>
+#include <math.h>
+/*
 template Track<float, 1>;
 template Track<vec3, 3>;
 template Track<quat, 4>;
@@ -7,7 +10,7 @@ template Track<quat, 4>;
 template FastTrack<float, 1>;
 template FastTrack<vec3, 3>;
 template FastTrack<quat, 4>;
-
+*/
 namespace TrackHelpers {
 	inline float Interpolate(float a, float b, float t) {
 		return a + (b - a) * t;
@@ -309,10 +312,11 @@ void FastTrack<T, N>::UpdateIndexLookupTable() {
 	}
 }
 
-
+/*
 template FastTrack<float, 1> OptimizeTrack(Track<float, 1>& input);
 template FastTrack<vec3, 3> OptimizeTrack(Track<vec3, 3>& input);
 template FastTrack<quat, 4> OptimizeTrack(Track<quat, 4>& input);
+*/
 
 template<typename T, int N>
 FastTrack<T, N> OptimizeTrack(Track<T, N>& input) {
@@ -328,3 +332,15 @@ FastTrack<T, N> OptimizeTrack(Track<T, N>& input) {
 
 	return result;
 }
+
+template class Track<float, 1>;
+template class Track<vec3, 3>;
+template class Track<quat, 4>;
+
+template class FastTrack<float, 1>;
+template class FastTrack<vec3, 3>;
+template class FastTrack<quat, 4>;
+
+template class FastTrack<float, 1> OptimizeTrack(Track<float, 1>& input);
+template class FastTrack<vec3, 3> OptimizeTrack(Track<vec3, 3>& input);
+template FastTrack<quat, 4> OptimizeTrack(Track<quat, 4>& input);

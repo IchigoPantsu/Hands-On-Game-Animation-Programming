@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Transform.h"
 
+#include <string.h>
 namespace GLTFHelpers {
 	Transform GetLocalTransform(cgltf_node& node) {
 		Transform result;
